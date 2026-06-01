@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub Stats</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-copy">
+            <span class="hero-badge">Frontend Developer</span>
+            <h1>Hi, I’m Leela.</h1>
+            <p>I build modern, polished web experiences with clean UI, smooth animations, and strong performance.</p>
+            <div class="hero-actions">
+                <a class="cta-button" href="#projects">View Projects</a>
+                <a class="cta-button secondary" href="#contact">Work Together</a>
+            </div>
+        </div>
+        <div class="hero-meta">
+            <p>Currently focusing on responsive design, animated interfaces, and developer-friendly code.</p>
+            <div class="date-time" id="dateTime">Loading date and time...</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="highlight-box">
+            <h3>What I'm working on now</h3>
+            <p>Sharpening my frontend skills with interactive UI components and responsive design.</p>
+        </div>
+
+        <div class="about-grid">
+            <div>
+                <p>Hello! I am Leela, a passionate frontend development learner. I enjoy creating beautiful and responsive websites using HTML and CSS.</p>
+                <p>I focus on clean layouts, fast loading pages, and user-friendly interfaces that feel modern and polished.</p>
+            </div>
+            <div class="profile-highlights">
+                <div class="highlight-pill">Responsive Design</div>
+                <div class="highlight-pill">Mobile-first UI</div>
+                <div class="highlight-pill">Performance Focused</div>
+                <div class="highlight-pill">Creative Animations</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skill-row">
+            <div class="skill-name">HTML</div>
+            <div class="skill-bar"><span style="width: 95%"></span></div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-name">CSS</div>
+            <div class="skill-bar"><span style="width: 90%"></span></div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar"><span style="width: 80%"></span></div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-name">Python</div>
+            <div class="skill-bar"><span style="width: 75%"></span></div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-name">AI Basics</div>
+            <div class="skill-bar"><span style="width: 70%"></span></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A polished personal portfolio page with responsive styling, clear content, and engaging visuals.</p>
+            <div class="project-meta">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Design</span>
+                <a class="project-button" href="#contact">Talk about it</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Landing Page</h3>
+            <p>Designed a responsive landing page for practice with modern layout and mobile-first behavior.</p>
+            <div class="project-meta">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Responsive</span>
+                <a class="project-button" href="#contact">See details</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Interactive UI Demo</h3>
+            <p>Built a small UI prototype focused on smooth transitions and accessible interactions.</p>
+            <div class="project-meta">
+                <span class="tag">UI</span>
+                <span class="tag">Animation</span>
+                <span class="tag">UX</span>
+                <a class="project-button" href="#contact">Let's connect</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Want to collaborate on a project or learn together? Reach out anytime.</p>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p>raparthileela@gmail.com</p>
+            </div>
+            <div class="contact-card">
+                <h3>LinkedIn</h3>
+                <p>linkedin.com/in/raparthi-leela-41836337b</p>
+            </div>
+        </div>
+
+        <a class="cta-button secondary" href="mailto:raparthileela@gmail.com">Send a message</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Leela Portfolio | DecodeLabs Project</p>
+    </footer>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const dateString = now.toLocaleDateString(undefined, options);
+            const timeString = now.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            document.getElementById('dateTime').textContent = `${dateString} • ${timeString}`;
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script></body>
+</html>
